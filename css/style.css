@@ -6,3 +6,110 @@
  Dark green: #28b485
 
 */
+
+:root {
+  --light-green: #7ed56f;
+  --medium-green: #55c57a;
+  --dark-green: #28b485;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap'); */
+
+body {
+  font-family: 'lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+} 
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(126, 213, 111, 0.856),
+    rgba(85, 197, 122, 0.884)),
+  url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 76vh, 0 100%);
+  position: relative;
+}
+
+.header .logo-box {
+  /* width: 125px;
+  height: 125px;
+  padding: 15px; */
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.logo-box>img {
+  /* width: 100%;
+  height: auto; */
+  height: 40px;
+}
+
+.header>.text-box {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color: brown; */
+}
+
+.header-content {
+  /* width: 540px; */
+  color: white;
+  text-transform: uppercase;
+}
+.heading-primary {
+  font-size: 60px;
+  display: block;
+  letter-spacing: 35px;
+  font-weight: 400;
+  animation: move-right 1.5s;
+}
+
+.heading-sub {
+  font-size: 19px;
+  display: block;
+  font-weight: 400;
+  letter-spacing: 17.5px;
+  padding-left: 5px;
+  animation: move-left 1.5s;
+}
+
+@keyframes move-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes move-left {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
